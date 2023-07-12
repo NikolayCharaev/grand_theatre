@@ -1,0 +1,47 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@font-face {
+  font-family: 'condensedBold';
+  src: url('../fonts/OpenSans_Condensed-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'condensedLight';
+  src: url('../fonts/OpenSans_Condensed-Light.ttf') format('opentype');
+}
+//FONTS
+
+//VARIABLES
+
+:root {
+  --gold: rgba(209, 169, 84, 1);
+  --black: rgba(51, 51, 51, 1);
+  --white: rgba(255, 255, 255, 1);
+}
+
+//VARIABLES
+
+body {
+  font-family: 'condensedBold';
+  color: var(--white);
+  font-style: normal;
+  line-height: normal;
+  background-color: var(--black);
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 15px 47px;
+  background-color: var(--gold);
+  color: var(--white);
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}

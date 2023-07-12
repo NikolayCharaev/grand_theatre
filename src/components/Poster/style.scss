@@ -1,0 +1,122 @@
+@import '../../scss/mixins';
+.poster {
+  &__inner {
+    margin: 0 auto;
+    // @include flex-between-center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    margin-top: 80px;
+    max-width: 540px;
+    @include flex-col;
+    gap: 50px;
+    margin-right: 125px;
+  }
+
+  &__title {
+    letter-spacing: 6.4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 64px;
+  }
+  &__description {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 150%;
+  }
+  button {
+    align-self: flex-start;
+  }
+
+
+
+
+  .slider__item{ 
+    width: 400px;
+    height: 590px;
+  }
+
+  &__image {
+    display: block;
+    position: relative;   
+    z-index: 20;
+  }
+  &__image-mask {
+
+    position: absolute;
+    top: 20px;
+    right: 65px;
+    z-index: 10;
+
+    img{ 
+      position: relative;
+      display: block;
+
+    }
+    .mask{ 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--gold);
+      opacity: .5;
+    }
+  
+  }
+
+
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 93%;
+    transform: translateX(0%);
+
+  }
+  .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+    content: '';
+    }
+    
+    .swiper-button-prev:after, .swiper-container-rtl .swiper-button-prev:after {
+    content: '';
+    }
+
+  .swiper-button-prev{
+    background-image: url('../../assets/arrow-left.svg');
+   
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+
+    &::before{ 
+      position: absolute;
+      content: 'пред';
+      color: var(--white);
+      top: 9px;
+      right: -50px;
+      text-transform: uppercase;
+    }
+   }
+
+   .swiper-button-next{
+    background-image: url('../../assets/arrow-right.svg');
+   
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &::before{ 
+      position: absolute;
+      content: 'след';
+      color: var(--white);
+      top: 9px;
+      left: -50px;
+      text-transform: uppercase;
+   
+    }
+   }
+ 
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Aside from '../Aside';
 
 import './style.scss';
 
@@ -44,6 +45,8 @@ const Header = () => {
           </a>
         </div>
       </div>
+
+      <Aside />
     </header>
   );
 };

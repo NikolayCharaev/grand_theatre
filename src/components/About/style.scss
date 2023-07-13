@@ -1,0 +1,42 @@
+.about {
+  margin-top: 300px;
+  margin-bottom: 114px;
+
+  &__title {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 2.1px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  &__description {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+
+    line-height: 150%;
+  }
+
+  &__item {
+    margin-bottom: 25px;
+    img {
+      margin-bottom: 15px;
+    }
+    &-title {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+
+      span {
+        color: var(--gold);
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    &-left {
+      max-width: 445px;
+    }
+  }
+}

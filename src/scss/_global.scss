@@ -1,5 +1,5 @@
 //FONTS
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 @font-face {
   font-family: 'condensedBold';
   src: url('../fonts/OpenSans_Condensed-Bold.ttf') format('truetype');
@@ -45,4 +45,17 @@ body {
   line-height: normal;
   letter-spacing: 1.8px;
   text-transform: uppercase;
+}
+
+.title {
+  font-family: 'condensedLight';
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 4.8px;
+  text-transform: uppercase;
+  span {
+    color: var(--gold);
+  }
 }

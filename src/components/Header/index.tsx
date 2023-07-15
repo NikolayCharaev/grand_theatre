@@ -1,6 +1,7 @@
 import React from 'react';
 import Aside from '../Aside';
 
+import { motion } from 'framer-motion';
 import './style.scss';
 
 const Header = () => {
@@ -8,7 +9,20 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header__inner">
-          <ul className="header__list">
+          <motion.ul
+            className="header__list"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{duration: .2}}
+            variants={{
+              hidden: { opacity: 0, y: -10 },
+              visible: {
+                opacity: 1,
+                y: 0,
+               
+              },
+            }}>
             <li className="header__item">
               <a className="header__link" href="##">
                 Главная
@@ -38,7 +52,7 @@ const Header = () => {
                 контакты
               </a>
             </li>
-          </ul>
+          </motion.ul>
 
           <a className="phone" href="tel:+74951234567">
             +7 495 123-45-67

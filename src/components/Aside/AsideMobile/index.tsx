@@ -1,34 +1,51 @@
+import { useState } from 'react';
+import close from '../../../assets/mobile/close.svg';
+import burger from '../../../assets/mobile/burger.svg';
 import './style.scss';
 
-import { motion } from 'framer-motion';
-import { useResize } from '../../hooks/UseResize';
-import AsideMobile from './AsideMobile';
-
-const Aside = () => {
-  const { width, isScreenSm, isScreenMd, isScreenLg, isScreenXl, isScreenXxl } = useResize();
+const AsideMobile = () => {
+  const [closeAside, setCloseAside] = useState<boolean>(true);
   return (
-    <div className="">
-      {!isScreenMd ? (
-          <AsideMobile />
-      ) : (
-        <motion.aside
-          className="aside"
-          initial="hidden"
-          whileInView={'visible'}
-          viewport={{ once: true, amount: 0.5 }}
-          variants={{
-            hidden: {
-              opacity: 0,
-              x: -10,
-            },
-            visible: {
-              opacity: 1,
-              x: 0,
-            },
-          }}>
-          <div className="aside__inner">
-            <h3 className="aside__title">контактная информация</h3>
+    <>
+      <img className='aside__open' src={burger} alt="open" onClick={() => setCloseAside(false)} />
+      <div className={`aside__mobile ${closeAside ? 'close' : 'open'}`}>
+        <div>
+          <div className="aside__mobile-top">
+            <img src={close} alt="close" onClick={() => setCloseAside(true)} />
+          </div>
 
+          <div className="">
+            <ul className=" menu__list">
+              <li className="aside__mobile-item menu__item">
+                <a className="aside__mobile-link menu__link" href="##">
+                  Главная
+                </a>
+              </li>
+
+              <li className="aside__mobile-item menu__item">
+                <a className="aside__mobile-link menu__link" href="##">
+                  о театре
+                </a>
+              </li>
+
+              <li className="aside__mobile-item menu__item">
+                <a className="aside__mobile-link menu__link" href="##">
+                  Наши постановки
+                </a>
+              </li>
+
+              <li className="aside__mobile-item menu__item">
+                <a className="aside__mobile-link menu__link" href="##">
+                  партнеры театра
+                </a>
+              </li>
+
+              <li className="aside__mobile-item menu__item">
+                <a className="aside__mobile-link menu__link" href="##">
+                  контакты
+                </a>
+              </li>
+            </ul>
             <div className="aside__socials">
               <svg // Instagram
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,10 +110,10 @@ const Aside = () => {
               </svg>
             </div>
           </div>
-        </motion.aside>
-      )}
-    </div>
+        </div>
+      </div>
+    </>
   );
 };
 
-export default Aside;
+export default AsideMobile;

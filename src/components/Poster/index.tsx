@@ -34,7 +34,7 @@ const Poster = () => {
             </p>
             <Button>афиша</Button>
           </motion.div>
-          <Swiper slidesPerView={1} navigation modules={[Navigation]}>
+          <Swiper slidesPerView={1} navigation modules={[Navigation]} className='slider__wrapper'>
             <ul className="slider">
               <SwiperSlide>
                 <li className="slider__item">

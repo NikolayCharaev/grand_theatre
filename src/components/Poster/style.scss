@@ -5,6 +5,13 @@
     // @include flex-between-center;
     display: flex;
     justify-content: space-between;
+
+
+    @media (max-width:1472px) {
+      // flex-direction: column-reverse;
+      // justify-content: center;
+      justify-content: space-evenly;
+    }
   }
 
   &__content {
@@ -31,7 +38,13 @@
 
 
 
+.slider__wrapper { 
 
+  @media (max-width:768px) {
+    display: none;
+    
+  }
+}
   .slider__item{ 
     width: 400px;
     height: 590px;

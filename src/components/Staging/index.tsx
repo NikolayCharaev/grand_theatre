@@ -108,7 +108,12 @@ const Staging = () => {
           </motion.li>
         </motion.ul>
 
-        <div className="container">
+
+
+        {/* <div className="container"> */}
+
+
+
           <div className="staging__stars">
             <div className="staging__stars-inner">
               <div className="staging__stars-left">
@@ -254,7 +259,7 @@ const Staging = () => {
               </div>
             </div>
           </div>
-        </div>
+        {/* </div>  */}
       </div>
     </div>
   );

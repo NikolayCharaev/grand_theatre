@@ -12,16 +12,21 @@ const Maecenas = () => {
 
           <div className="maecenas__content">
             <div className="maecenas__content-left">
-              <a className="maecenas__phone" href="tel:+78121234555">
-                +7 (812) 123-45-55
-              </a>
-              <a className="maecenas__phone" href="tel:+78121234566">
-                +7 (812) 123-45-66
-              </a>
-              <a className="maecenas__email" href="mailto:info@theater.ru">
-                info@theater.ru
-              </a>
-              <p className="maecenas__address">г. санкт-петербург, невский 140</p>
+              <div className="maecenas__content-phones">
+                <a className="maecenas__phone" href="tel:+78121234555">
+                  +7 (812) 123-45-55
+                </a>
+                <a className="maecenas__phone" href="tel:+78121234566">
+                  +7 (812) 123-45-66
+                </a>
+              </div>
+
+              <div className="maecenas__content-address">
+                <a className="maecenas__email" href="mailto:info@theater.ru">
+                  info@theater.ru
+                </a>
+                <p className="maecenas__address">г. санкт-петербург, невский 140</p>
+              </div>
             </div>
             <div className="maecenas__content-right">
               <form className="maecenas__form" action="">

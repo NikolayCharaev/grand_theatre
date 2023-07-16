@@ -2,6 +2,10 @@
   margin-top: 300px;
   margin-bottom: 114px;
 
+  @media (max-width: 780px) {
+    margin-top: 400px;
+  }
+
   &__title {
     font-size: 21px;
     font-weight: 700;
@@ -35,8 +39,22 @@
   &__content {
     display: flex;
     justify-content: space-between;
+
     &-left {
       max-width: 445px;
+    }
+
+    @media (max-width: 1033px) {
+      margin: 0 40px;
+      div {
+        align-self: flex-start;
+      }
+
+      margin: 40px;
+      flex-wrap: wrap;
+      gap: 60px;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

@@ -8,9 +8,10 @@
 
 
     @media (max-width:1472px) {
-      // flex-direction: column-reverse;
-      // justify-content: center;
-      justify-content: space-evenly;
+
+      justify-content: center;
+      margin-right: 0;
+
     }
   }
 
@@ -20,6 +21,10 @@
     @include flex-col;
     gap: 50px;
     margin-right: 125px;
+
+    @media (max-width:1472px) {
+      margin-right: 0;
+    }
   }
 
   &__title {
@@ -27,10 +32,20 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: 64px;
+
+    @media (max-width:527px) {
+      font-size: 44px;
+      text-align: center;
+    }
   }
   &__description {
     font-family: 'Open Sans', sans-serif;
     line-height: 150%;
+    @media (max-width:768px) {
+      text-align: left;
+      font-weight: 400;
+      font-size: 13px;
+    }
   }
   button {
     align-self: flex-start;
@@ -40,7 +55,7 @@
 
 .slider__wrapper { 
 
-  @media (max-width:768px) {
+  @media (max-width:1472px) {
     display: none;
     
   }

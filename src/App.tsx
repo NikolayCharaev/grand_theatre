@@ -9,11 +9,11 @@ function App() {
   return (
     <>
       <Header />
-     <Poster />
-        <About />
+      <Poster />
+      <About />
       <Staging />
       <Partners />
-      <Maecenas /> 
+      <Maecenas />
     </>
   );
 }

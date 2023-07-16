@@ -4,7 +4,13 @@
   }
   &__content {
     display: flex;
-    // align-items: center;
+
+    @media (max-width: 1192px) {
+      flex-direction: column-reverse;
+      gap: 40px;
+      max-width: 686px;
+      margin: 0 auto;
+    }
     &-left {
       text-transform: uppercase;
       display: flex;
@@ -12,32 +18,59 @@
       gap: 25px;
       min-width: 255px;
       margin-right: 126px;
-
+   
       a {
         color: var(--white);
       }
+
+      @media (max-width: 992px) {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+      }
     }
+
+    &-phones{ 
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+ 
   }
 
   &__form {
     &-top {
-      //   display: flex;
-      //   justify-content: space-between;
-      //   flex-wrap: wrap;
-      //   gap: 30px;
-
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 30px;
       margin-bottom: 40px;
+      @media (max-width:798px) {
+        grid-template-columns: repeat(1, 1fr);
+
+        input{ 
+          width: 100%;
+        }
+      }
+      @media (max-width:478px) {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        grid-gap: 15px;
+      }
+      
+     
 
       .input-one {
         grid-column-start: 1;
         grid-column-end: 2;
+
+  
       }
       .input-two {
         grid-column-start: 2;
         grid-column-end: 3;
+
       }
       .input-three {
         grid-column-start: 3;
@@ -47,6 +80,16 @@
         resize: none;
         width: 310px;
         height: 100px;
+
+        @media (max-width:798px) {
+        width: 100%;
+
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 4;
+          grid-row-end: 3;
+
+         }
       }
       .input-four {
         grid-column-start: 1;
@@ -63,6 +106,11 @@
       display: flex;
       justify-content: space-between;
 
+      @media (max-width:478px) {
+         flex-direction: column-reverse;
+         gap: 20px; 
+      } 
+
       p {
         max-width: 390px;
         color: #989898;
@@ -77,8 +125,6 @@
     background: #444;
     width: 180px;
     height: 35px;
-
-    // padding: 15px ;
     min-width: 180px;
 
     &::placeholder {
@@ -90,16 +136,18 @@
       line-height: 150%;
     }
   }
-
   &__textarea {
     border: 1px solid #616161;
     background: #444;
     width: 310px;
-    // height: 100px;
     display: none;
+
+    @media (max-width:798px) {
+        max-width: 100%;
+    }
+  
   }
 }
-
 .footer {
   &__border {
     width: 100%;
@@ -108,7 +156,6 @@
     background-color: rgba(86, 86, 86, 1);
     margin-bottom: 30px;
   }
-
   &__content {
     display: flex;
     justify-content: space-between;

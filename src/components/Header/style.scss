@@ -13,6 +13,11 @@
     height: 100vh;
     background-image: url('../../assets/home-bg.jpg');
     background-repeat: no-repeat;
+
+
+    @media (max-width:768px) {
+        background-position: center;
+    }
   }
 
   .menu{
